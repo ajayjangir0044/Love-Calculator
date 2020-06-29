@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pangolin&family=Sacramento&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="home">
+        <h1>Love Calculator</h1>
+        <div class="box">
+            <p class="asdf">Here is the Love Calculator that lets you calculate love compatibility and your chances of a
+                successful
+                relationship.</p>
+        </div>
+        <div class="card" id="box" style="width: 18rem;">
+            <div class="card-body">
+                <p class="card-text">
+                    <form name="Love Calculator" method="POST">
+                        <h1 class="formH1">Love Calculator</h1><br>
+                        <label for="name">Enter your name :</label><br>
+                        <input type="text" id="firstPerson" name="name1" required placeholder="Full Name"><br><br>
+                        <br><i class="fas fa-heart"></i><br><br><br>
+                        <label for="name">Your Crush name :</label>
+                        <input type="text" name="name2" id="secondPerson" required placeholder="Full Name"><br><br><br>
+                        <input type="submit" value="Calculate" onclick="next()" class="button">
+
+                    </form>
+                </p>
+            </div>
+        </div>
+        <script>
+            const scriptURL =
+                'https://script.google.com/macros/s/AKfycbyj_pGjuGCinbcVCCtdiaooKVm8G0cXvuPJkLhB3pp7Dr50936p/exec'
+            const form = document.forms['Love Calculator']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+
+            function next() {
+                window.location.href = "response.html";
+            }
+        </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </section>
+    <section class="social-media">
+        <div class="container-fluid"><a href="https://www.facebook.com/ajay.jangir.942145/"><i   class="social-icon fab fa-facebook-f"></i></a>
+     <a href="https://twitter.com/Ajayjan28548037"> <i class="social-icon fab fa-twitter"></i></a>
+     <a href="https://www.instagram.com/ajayjangir0044/"> <i class="social-icon fab fa-instagram"></i></a>
+     <a href="mailto:ajayjangir0044@gmail.com"> <i class="social-icon fas fa-envelope" id="mail-icon"></i></a>
+      <p>© Copyright 2020 Ajay Jangir</p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

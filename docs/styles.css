@@ -1,0 +1,135 @@
+body {
+    background-color: #fde2e2;
+    text-align: center;
+    /* ff427f */
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ff427f;
+    font-weight: lighter;
+
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.fas {
+    font-size: 4em;
+    color: #fff;
+
+}
+
+.formH1 {
+    color: #fff;
+    font-size: 1.4rem;
+    padding-top: 20px;
+}
+
+.box {
+    line-height: 1.5;
+
+
+    text-align: center;
+
+}
+
+
+.card {
+    border-radius: 10px;
+    margin-top: 50px !important;
+}
+
+#box {
+    text-align: center;
+    margin: 3px auto;
+    background-color: #ff427f;
+}
+
+label {
+    color: #fff;
+    line-height: 1.5;
+}
+
+::placeholder {
+    color: #ffb0cd;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="text"] {
+    margin-top: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f6ff;
+    background-color: #ff427f;
+    border-bottom: solid 1px #fde2e2;
+}
+
+.button{
+    background-color: #ff427f !important;
+
+    border: solid 1px #fff;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.asdf{
+    width: 40%;
+    line-height: 1.6;
+    margin: auto;
+}
+
+.button:hover {
+
+    background-color: #fff !important;
+    color: #ff427f;
+    cursor: pointer;
+}
+/* footer */
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-media p {
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.social-icon {
+    margin: 10px 15px 10px;
+    color: black;
+}
+#mail-icon{
+    font-size: 17px;
+}
+.social-icon:hover{
+    color: #ff427f;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+
+        font-weight: lighter;
+    }
+    .asdf{
+        width: 100%;
+    }
+}
+
+

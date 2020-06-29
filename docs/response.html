@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pangolin&family=Sacramento&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="home">
+        <h1>Love Calculator</h1>
+        <div class="box">
+            <p class="asdf">Don't believe on the love calculator blindly. 
+                No calculator can count your love towards your soulmate 🧡 It's a sort of fun game
+                ⭐
+            </p>
+        </div>
+
+            <div id="progress-circle" class="progress-circle" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <span class="p-h"></span><span class="p-f"></span>
+              <span id="progress">0%</span> <span class="sr-only">Complete</span>
+            </div>
+            
+        
+        <style type="text/css" id="progress-style">
+        </style>
+        <a href="index.html"><input type="submit" value="Recalculate" class="button"></a>
+    </section>
+    
+    <script>
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+      
+      var sn = getParameterByName('serialNumber');
+      
+      document.getElementById("write").innerHTML = sn;
+      document.write(sn);
+      
+      </script>
+
+
+
+<script >
+    function css3RadialProgressBar() {
+  /* Vars */
+  var xvaluenow = Math.floor((Math.random() * 100) + 0); //Generates a random number (0-100) only for demonstration
+  //var xvaluenow = 0; //Insert here a specific number (0-100) and remove the comment this var, and the above code
+  var rotatenum = 'rotate(' + xvaluenow * 1.8 + 'deg)';
+  var progress = document.getElementById('progress');
+  var progress_circle = document.getElementById('progress-circle');
+  var progress_style = document.getElementById('progress-style');
+  
+  /* Fix: Cover gap with shadow */
+  if (xvaluenow == 0) {
+    var shadowfix = "0";
+  }
+  else {
+    var shadowfix = "1px";
+  }
+  
+  /* Inserting values */
+  progress.innerHTML = xvaluenow + '%';
+  progress_circle.setAttribute("aria-valuenow", xvaluenow);  
+  progress_style.innerHTML = " \
+.p-h:before, .p-f, .p-f:before{ \
+-moz-transform: " + rotatenum + "; \
+-webkit-transform: " + rotatenum + "; \
+-o-transform: " + rotatenum + "; \
+-ms-transform: " + rotatenum + "; \
+transform: " + rotatenum + "; \
+-webkit-box-shadow: 0 0 0 " + shadowfix + " #828282; \
+  box-shadow: 0 0 0 " + shadowfix + " #828282;}\
+\ ";
+}
+
+document.body.onload = function() {css3RadialProgressBar()};
+</script>
+<section class="socials">
+  <div class="container-fluid">
+      <a href="https://www.facebook.com/ajay.jangir.942145/"><i   class="social-icon fab fa-facebook-f"></i></a>
+     <a href="https://twitter.com/Ajayjan28548037"> <i class="social-icon fab fa-twitter"></i></a>
+     <a href="https://www.instagram.com/ajayjangir0044/"> <i class="social-icon fab fa-instagram"></i></a>
+     <a href="mailto:ajayjangir0044@gmail.com"> <i class="social-icon fas fa-envelope" id="mail-icon"></i></a>
+      <p>© Copyright 2020 Ajay Jangir</p>
+  </div>
+</section>
+
+</body>
+
+</html>
